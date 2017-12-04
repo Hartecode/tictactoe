@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tic tac toe</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Tic Tac Toe</h1>
+      </div>
+
+      <div class="border-settings setup versus">
+        <h3>Opponent</h3>
+        <div class="flex">
+
+          <button class="computer select" type="button" name="computer">
+            <i class="fa fa-laptop fa-4x" aria-hidden="true"></i>
+            <h3>Single</h3>
+          </button>
+
+          <button class="human select" type="button" name="human">
+            <i class="fa fa-venus fa-4x" aria-hidden="true"></i>
+            <h3>Multiplayer</h3>
+          </button>
+        </div>
+      </div>
+
+      <div class="border-settings setup difficulty">
+        <h3>Difficulty</h3>
+        <button class="level select" type="button" name="easy">Easy</button>
+        <button class="level select" type="button" name="medium">Medium</button>
+        <button class="level select" type="button" name="unbeatable">Unbeatable</button>
+
+      </div>
+
+      <div class="border-settings player">
+        <h2>Player 1</h2>
+        <div class="again">
+          <p>play again <i class="fa fa-repeat" aria-hidden="true"></i></p>
+        </div>
+      </div>
+
+      <div class="border-settings setup symbols">
+        <h3>Symbols</h3>
+        <div class="flex">
+          <button class="chose select" type="button" name="x">x</button>
+          <button class="chose select" type="button" name="o">o</button>
+        </div>
+      </div>
+
+      <div class="board">
+        <!-- The tic tac toe board -->
+        <table class="border-settings">
+          <tr>
+            <td><button class="1" type="button"></button></td>
+            <td><button class="2" type="button"></button></td>
+            <td><button class="3" type="button"></button></td>
+          </tr>
+
+          <tr>
+            <td><button class="4" type="button"></button></td>
+            <td><button class="5" type="button"></button></td>
+            <td><button class="6" type="button"></button></td>
+          </tr>
+
+          <tr>
+            <td><button class="7" type="button"></button></td>
+            <td><button class="8" type="button"></button></td>
+            <td><button class="9" type="button"></button></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="border-settings flex score">
+        <div class="flex">
+          <div class="how-hard">
+            <h5></h5>
+          </div>
+          <div class="flex">
+            <div id="p1" class="p1">
+              <p>
+                <i class="fa fa-venus " aria-hidden="true">1</i>:
+                <span class="p1Score">0</span>
+              </p>
+            </div>
+            <div class="p1">
+              <p>
+                <i  class="p2 fa" aria-hidden="true">2</i>:
+                <span class="p2Score">0</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="javascript/frameworks/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="javascript/tictactoe.js"></script>
+
+
+  </body>
+</html>

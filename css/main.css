@@ -1,0 +1,197 @@
+body {
+  background-color: #320075;
+  text-align: center;
+  color: green;
+}
+
+h1  {
+  font-size: 3em;
+}
+
+h2{
+  margin: 5px;
+}
+
+h5 {
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+p {
+  margin: 0 0 5px;
+}
+
+button {
+  border: none;
+  color: green;
+  background-color: #320075;
+  width: 100%;
+  height: 100%;
+}
+
+button:focus {
+  outline:0;
+}
+
+table {
+   margin: auto;
+}
+
+table button{
+  font-size: 70px;
+}
+
+td {
+   width: 100px;
+   height: 100px;
+   text-align: center;
+}
+
+/*The board lines was done like this to minimize the following code instead of classes to reduce the amount of changes to the html file. */
+td:nth-of-type(1) {
+  border-right:2px solid green;
+}
+
+td:nth-of-type(2) {
+  border-right:2px solid green;
+}
+
+tr:nth-of-type(2) td {
+  border-top:2px solid green;
+  border-bottom:2px solid green;
+}
+
+.title {
+  position: fixed;
+  width: 100%;
+  top: 200px;
+  overflow: hidden;
+  animation: 3s slidedown, 2s fadeout 3s forwards;
+}
+/*title openning animation*/
+@keyframes slidedown {
+  from {
+    margin-top: -100%;
+    top: 0px;
+  }
+  to {
+    margin-top: 0%;
+    top: 200px;
+  }
+}
+
+@keyframes fadeout {
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
+.border-settings {
+  border: 2px solid green;
+  box-shadow: 0px 0px 20px 0px #5400c5;
+}
+
+.setup {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 30px;
+  min-height: 200px;
+  max-height: 200px;
+  border-radius: 10%;
+  position: relative;
+}
+
+.versus {
+  opacity: 0;
+  top: 175px;
+  animation: 2s fadein 5s forwards;
+}
+
+.player, .symbols, .again, .board{
+  display: none;
+}
+
+@keyframes fadein {
+  from {opacity :0;}
+  to {opacity :1;}
+}
+
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.computer, .human, .chose {
+  width: 50%;
+  transition: all .5s;
+}
+
+.select:hover {
+  background-color: #00a210;
+  color: yellow;
+  border-radius: 50%;
+}
+
+.level {
+  font-size: 1em;
+  width: 130px;
+  height: 35px;
+  margin: 5px 10px 5px 10px;
+  transition: all .5s;
+}
+
+.difficulty {
+  top: 175px;
+  display: none;
+}
+
+.player {
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  position: relative;
+  top: 50px;
+  height: 42px;
+  max-width: 320px;
+  overflow-y: hidden;
+  transition: all .5s;
+}
+
+.playerExpand {
+  height: 65px;
+}
+
+.symbols {
+  top: 75px;
+}
+
+.chose {
+  font-size: 100px;
+}
+
+.board {
+  position: relative;
+  top: 45px;
+}
+
+.score{
+  text-align: center;
+  position: relative;
+  top: 60px;
+  margin: auto;
+  max-width: 320px;
+  padding-top: 10px;
+  display: none;
+}
+
+#p1 {
+  margin-right: 20px;
+}
+
+.winner {
+  background-color: #8f00bd;
+  text-shadow: 0px 0px 8px white;
+}
