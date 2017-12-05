@@ -55,14 +55,43 @@ $(document).ready(function(){
     }
   });
 
-  // $(".how-hard h5").click(function(){
-  //   if()
-  // });
+  ///this button chnages the difficulty
+  $(".how-hard h5").click(function(){
+    if(opponent === "computer"){
+      levelToggle();
+    }
+  });
+
+  $(".p2").click(function(){
+
+    theWinner = "draw";
+    playerTurn = 1
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    $(".p1Score").text(playerOneScore);
+    $(".p2Score").text(playerTwoScore);
+    if(opponent === "computer"){
+      opponent = "human";
+      $(".how-hard h5").text("Multiplayer");
+      $(".p2").removeClass("fa-laptop");
+      $(".p2").addClass("fa-venus");
+
+    } else {
+      opponent = "computer";
+      difficulty = "easy";
+      $(".how-hard h5").text(difficulty);
+      $(".p2").removeClass("fa-venus");
+      $(".p2").addClass("fa-laptop");
+    }
+
+    refresh();
+  });
 
   //the play again button
   $(".again").click(function(){
     refresh();
   });
+
 
   //this function check if there is a winner, update which player is next
   function endOfMove(playerSym) {
@@ -76,6 +105,8 @@ $(document).ready(function(){
 
         if(opponent != "computer") {
           $(".player h2").text("Player " + playerTurn);
+        } else {
+          $(".player h2").text("Single Player");
         }
       }
 
@@ -259,6 +290,7 @@ $(document).ready(function(){
     $("td button").removeClass("winner");
     $(".player").removeClass("playerExpand");
     if(playerTurn === 2 && opponent === "computer"){
+      $(".player h2").text("Single Player");
       computerMove(opponent, playerTwoSym, winningSequence);
       endOfMove(playerTwoSym);
     }
