@@ -207,7 +207,7 @@ $(document).ready(function(){
       //check board if player 1 is close to winningSequenc
     } else if(moveOutThree(winningSequence, playerOneSym, twoOutOfThree) && (difficulty === "medium" || difficulty === "unbeatable")){
       $("."+ twoOutOfThree(selectArrey, playerOneSym)).text(playerTwoSym).hide().fadeIn(1000);
-    } else if(($("td").text().length === 0 || $(".5").text() === "") && difficulty === "unbeatable") {
+    } else if(($(".border-settings tr td").text().length === 0 || $(".5").text() === "") && difficulty === "unbeatable") {
       $(".5").text(playerTwoSym).hide().fadeIn(1000);;
     } else if (moveOutThree(winningSequence, playerOneSym, oneOutOfThree) &&  difficulty === "unbeatable"){
       $("."+ oneOutOfThree(selectArrey, playerOneSym)).text(playerTwoSym).hide().fadeIn(1000);
@@ -255,7 +255,7 @@ $(document).ready(function(){
       }
     });
     // if there is no winner and all the stops are filled; if both players tie
-    if( result &&  $("td").text().length === 9){
+    if( result &&  $(".border-settings tr td").text().length === 9){
       console.log("draw");
       game = "over";
       theWinner = "draw";
@@ -287,7 +287,7 @@ $(document).ready(function(){
 
     game = "play again"
     $(".again").css("display", "none");
-    $("td button").removeClass("winner");
+    $(".border-settings tr td button").removeClass("winner");
     $(".player").removeClass("playerExpand");
     if(playerTurn === 2 && opponent === "computer"){
       $(".player h2").text("Single Player");
