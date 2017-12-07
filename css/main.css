@@ -156,20 +156,12 @@ span.toe {
 }
 
 .versus {
-  opacity: 0;
   top: 175px;
-  animation: 2s fadein 4.5s forwards;
 }
 
-.player, .symbols, .again, .board{
+.player, .symbols, .again, .board, .versus{
   display: none;
 }
-
-@keyframes fadein {
-  from {opacity :0;}
-  to {opacity :1;}
-}
-
 
 .flex {
   display: flex;
